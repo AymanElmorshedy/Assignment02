@@ -52,6 +52,19 @@ namespace Assignment02
         }
         #endregion
 
+        #region Q05
+        public static int[] RemoveDuplicates(int[] arr)
+        {
+            List<int> list = new List<int>();
+            foreach (int i in arr)
+            {
+                if (!list.Contains(i))
+                    list.Add(i);
+            }
+            return list.ToArray();
+        }
+        #endregion
+
 
 
         static void Main(string[] args)
@@ -86,6 +99,17 @@ namespace Assignment02
 
 
             #endregion
+
+            #region Q04
+
+            #endregion
+
+            #region Q05
+            int[] Numbers = { 1, 3, 2, 3, 1 };
+            int[] result = RemoveDuplicates(Numbers);
+            Console.WriteLine(string.Join(", ", result));
+            #endregion
+
         }
     }
 }
