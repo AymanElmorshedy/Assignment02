@@ -52,6 +52,27 @@ namespace Assignment02
         }
         #endregion
 
+        #region Q04
+       public static bool IsBalanced(string str)
+        {
+            Stack<char> stack = new ();
+
+            foreach (char c in str)
+            {
+                if (c == '(' || c == '[' || c == '{')
+                    stack.Push(c);
+                else if (c == ']' && (stack.Count == 0 || stack.Pop() != '['))
+                    return false;
+                else if (c == ')' && (stack.Count == 0 || stack.Pop() != '('))
+                    return false;
+                else if (c == '}' && (stack.Count == 0 || stack.Pop() != '{'))
+                    return false;
+            }
+
+            return stack.Count == 0;
+        }
+        #endregion
+
         #region Q05
         public static int[] RemoveDuplicates(int[] arr)
         {
@@ -217,7 +238,8 @@ namespace Assignment02
             #endregion
 
             #region Q04
-
+            string str = "[()]{}";
+            Console.WriteLine(IsBalanced(str) ? "true" : "false");
             #endregion
 
             #region Q05
@@ -279,12 +301,12 @@ namespace Assignment02
             #endregion
 
             #region Q13
-            Hashtable hashtable = new Hashtable();
-            hashtable.Add("A", 1);
-            hashtable.Add("B", 2);
-            hashtable.Add("C", 3);
-            object MaxValueKey = FindKeyWithHigestValue(hashtable);
-            Console.WriteLine($"key of max value is :{MaxValueKey}");
+            //Hashtable hashtable = new Hashtable();
+            //hashtable.Add("A", 1);
+            //hashtable.Add("B", 2);
+            //hashtable.Add("C", 3);
+            //object MaxValueKey = FindKeyWithHigestValue(hashtable);
+            //Console.WriteLine($"key of max value is :{MaxValueKey}");
             #endregion
 
             #region Q14
