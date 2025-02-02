@@ -324,7 +324,7 @@ namespace Assignment02
             //List<int> TargetValueKey = new List<int>();
             //Console.WriteLine("Enter a target");
             //int target = int.Parse(Console.ReadLine());
-        
+
             //foreach (var item in Numbers)
             //{
             //    if(item.Value == target)
@@ -356,7 +356,24 @@ namespace Assignment02
             #endregion
 
             #region Q18
+            Dictionary<int, int> Numbers = new Dictionary<int, int>()
+            {
+                { 0, 4 },
+                { 1, 5 },
+                { 2, 6 },
+                { 3, 7 }
+            };
 
+            Dictionary<int, int> CopiedNumbers = new Dictionary<int, int>();
+
+            foreach (var i in Numbers)
+            {
+                CopiedNumbers[i.Value] = i.Key;
+            }
+
+            foreach (var item in Numbers) Console.WriteLine($"{item.Key}:{item.Value}");
+            Console.WriteLine("After Transfaring");
+            foreach (var item in CopiedNumbers) Console.WriteLine($"{item.Key}:{item.Value}");
             #endregion
 
 
