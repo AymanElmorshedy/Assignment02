@@ -146,6 +146,21 @@ namespace Assignment02
         }
         #endregion
 
+        #region Q16
+        public static bool CheckDoublecations(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if(arr[i] == arr[j])
+                        return true;
+                }
+            }
+            return false;
+        }
+        #endregion
+
 
 
 
@@ -241,10 +256,36 @@ namespace Assignment02
             #endregion
 
             #region Q12
-            int[] Numbers = { 1, 2, 2, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, };
-            CountFrequency(Numbers);
+            //int[] Numbers = { 1, 2, 2, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, };
+            //CountFrequency(Numbers);
             #endregion
 
+            #region Q13
+
+            #endregion
+
+            #region Q14
+
+            #endregion
+
+            #region Q15
+
+            #endregion
+
+            #region Q16
+            //int[] arr = { 1, 2, 3, 5, 3 };
+            ////CheckDoublecations (arr);
+            //Console.WriteLine(CheckDoublecations(arr));
+
+            #endregion
+
+            #region Q17
+
+            #endregion
+
+            #region Q18
+
+            #endregion
 
 
         }
