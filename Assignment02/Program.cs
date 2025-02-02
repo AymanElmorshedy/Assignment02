@@ -86,6 +86,26 @@ namespace Assignment02
            
         }
         #endregion
+        #region Q09
+        public static List<int> FindIntersection(int[] arr01, int[] arr02)
+        {
+            List<int> intersection = new List<int>();
+            for (int i = 0; i < arr01.Length; i++)
+            {
+                for (int j = 0; j < arr02.Length; j++)
+                {
+                    if (arr01[i] == arr02[j])
+                    {
+                        intersection.Add(arr01[i]);
+                        arr02[j] = -1;
+                        break;
+                    }
+                        
+                }
+            }
+            return intersection; 
+        }
+        #endregion
 
 
 
@@ -150,15 +170,24 @@ namespace Assignment02
             #endregion
 
             #region Q08
-            Stack<int> Numbers = new Stack<int>();
-            Numbers.Push(0);
-            Numbers.Push(1);
-            Numbers.Push(2);
-            Numbers.Push(3);
-            Numbers.Push(4);
-            Numbers.Push(5);
-            FindElementInStack(Numbers, 4);
+            //Stack<int> Numbers = new Stack<int>();
+            //Numbers.Push(0);
+            //Numbers.Push(1);
+            //Numbers.Push(2);
+            //Numbers.Push(3);
+            //Numbers.Push(4);
+            //Numbers.Push(5);
+            //FindElementInStack(Numbers, 4);
 
+
+            #endregion
+
+            #region Q09
+            //int[] arr01 = { 1, 2, 3, 4, 5, };
+            //int[] arr02 = { 2, 4, 6, 8 };
+            //List<int> result = FindIntersection(arr01, arr02);
+            //foreach (int item in result)
+            //    Console.Write($"{item},");
 
             #endregion
 
