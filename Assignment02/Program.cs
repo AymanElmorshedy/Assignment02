@@ -146,6 +146,24 @@ namespace Assignment02
         }
         #endregion
 
+        #region Q13
+        public static object FindKeyWithHigestValue(Hashtable ht)
+        {
+            object MaxKey=null;
+            int MaxValue=int.MinValue;
+            foreach (DictionaryEntry entry in ht)
+            {
+                int value = (int)entry.Value;
+                if (value > MaxValue)
+                {
+                    MaxValue = value;
+                    MaxKey = entry;
+                }
+            }
+            return MaxKey;
+        }
+        #endregion
+
         #region Q16
         public static bool CheckDoublecations(int[] arr)
         {
@@ -261,7 +279,12 @@ namespace Assignment02
             #endregion
 
             #region Q13
-
+            Hashtable hashtable = new Hashtable();
+            hashtable.Add("A", 1);
+            hashtable.Add("B", 2);
+            hashtable.Add("C", 3);
+            object MaxValueKey = FindKeyWithHigestValue(hashtable);
+            Console.WriteLine($"key of max value is :{MaxValueKey}");
             #endregion
 
             #region Q14
