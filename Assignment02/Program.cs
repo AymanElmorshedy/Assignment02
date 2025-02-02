@@ -107,6 +107,28 @@ namespace Assignment02
         }
         #endregion
 
+        #region Q11
+        public static void ReverseKElements(Queue<int> queue, int K)
+        {
+            
+            Stack<int> stack = new Stack<int>();
+            for (int i = 0; i < K; i++)
+            {
+                if (queue.Count > 0)
+                    stack.Push(queue.Dequeue());
+            }
+            while (stack.Count > 0)
+            {
+                queue.Enqueue(stack.Pop());
+            }
+            int remaining = queue.Count - K;
+            for (int i = 0; i < remaining; i++)
+            {
+                queue.Enqueue(queue.Dequeue());
+            }
+        }
+        #endregion
+
 
 
         static void Main(string[] args)
@@ -189,6 +211,14 @@ namespace Assignment02
             //foreach (int item in result)
             //    Console.Write($"{item},");
 
+            #endregion
+
+            #region Q10
+            Queue<int> queue = new Queue<int>(new[] {1,2,3,4,5,6});
+            int K = 4;
+            ReverseKElements(queue, K);
+            foreach(int i in queue)
+                Console.Write($"{i},");
             #endregion
 
 
