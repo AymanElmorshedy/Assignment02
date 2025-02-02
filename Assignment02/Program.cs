@@ -15,15 +15,16 @@ namespace Assignment02
             }
             return count;
 
-        } 
+        }
         #endregion
 
-        public static bool IsPalindrome(int [] arr)
+        #region Q02
+        public static bool IsPalindrome(int[] arr)
         {
-            int left = 0, right = arr.Length-1;
+            int left = 0, right = arr.Length - 1;
             while (left < right)
             {
-                if(arr[left] != arr[right])
+                if (arr[left] != arr[right])
                     return false;
                 left++;
                 right--;
@@ -33,6 +34,24 @@ namespace Assignment02
             }
             return true;
         }
+        #endregion
+
+        #region Q03
+        public static void ReverseQueue( Queue<int> queue )
+        {
+            Stack<int> stack = new Stack<int>();
+            while (queue.Count > 0)
+            {
+                stack.Push(queue.Dequeue());
+            }
+            while (stack.Count > 0)
+            {
+                queue.Enqueue(stack.Pop());
+            }
+            
+        }
+        #endregion
+
 
 
         static void Main(string[] args)
@@ -47,8 +66,25 @@ namespace Assignment02
             #endregion
 
             #region Q02
-            int[] Numbers = { 1, 3, 2, 3, 1 };
-            Console.WriteLine(IsPalindrome(Numbers));
+            //int[] Numbers = { 1, 3, 2, 3, 1 };
+            //Console.WriteLine(IsPalindrome(Numbers));
+            #endregion
+
+            #region Q03
+            //Queue<int> queue = new Queue<int>();
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+
+            //Console.WriteLine("Original Queue: " + string.Join(", ", queue));
+
+            //ReverseQueue(queue);
+
+            //Console.WriteLine("Reversed Queue: " + string.Join(", ", queue));
+
+
+
             #endregion
         }
     }
