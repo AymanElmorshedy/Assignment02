@@ -65,6 +65,17 @@ namespace Assignment02
         }
         #endregion
 
+        #region Q06
+        public static void RemoveOddNumbers(ref ArrayList arr)
+        {
+            for(int i = 0; i < arr.Count; i++)
+            {
+                if ((int)arr[i] %2==1)
+                    arr.RemoveAt(i);
+            }
+        }
+        #endregion
+
 
 
         static void Main(string[] args)
@@ -105,10 +116,21 @@ namespace Assignment02
             #endregion
 
             #region Q05
-            int[] Numbers = { 1, 3, 2, 3, 1 };
-            int[] result = RemoveDuplicates(Numbers);
-            Console.WriteLine(string.Join(", ", result));
+            //int[] Numbers = { 1, 3, 2, 3, 1 };
+            //int[] result = RemoveDuplicates(Numbers);
+            //Console.WriteLine(string.Join(", ", result));
             #endregion
+            #region Q06
+            ArrayList list = new ArrayList() { 1, 2, 3, 4, 5 };
+            RemoveOddNumbers(ref list);
+            Console.WriteLine("List after removing items");
+            foreach(int item in list)
+                Console.Write($" {item} ,");
+
+
+                #endregion
+
+
 
         }
     }
