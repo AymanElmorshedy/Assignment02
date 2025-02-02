@@ -238,8 +238,8 @@ namespace Assignment02
             #endregion
 
             #region Q04
-            string str = "[()]{}";
-            Console.WriteLine(IsBalanced(str) ? "true" : "false");
+            //string str = "[()]{}";
+            //Console.WriteLine(IsBalanced(str) ? "true" : "false");
             #endregion
 
             #region Q05
@@ -310,6 +310,33 @@ namespace Assignment02
             #endregion
 
             #region Q14
+            //Dictionary<int, int> Numbers = new Dictionary<int, int>()
+            //{
+            //    {1,2 },
+            //    {2,6 },
+            //    {3,7},
+            //    {4,8},
+            //    {5,6},
+            //    {6,6},
+
+            //};
+
+            //List<int> TargetValueKey = new List<int>();
+            //Console.WriteLine("Enter a target");
+            //int target = int.Parse(Console.ReadLine());
+        
+            //foreach (var item in Numbers)
+            //{
+            //    if(item.Value == target)
+            //        TargetValueKey.Add(item.Key);
+            //    else
+            //        Console.WriteLine("Not found");
+
+            //}
+            //foreach (int item in TargetValueKey)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
             #endregion
 
